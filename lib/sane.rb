@@ -25,7 +25,7 @@ module Sane
           rescue Exception => e
             @reporter.results[file] = @reporter.results[file] || [];
             @reporter.results[file] << e.message
-            next
+            break
           end
         end
       end
