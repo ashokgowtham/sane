@@ -44,8 +44,7 @@ module Sane
     class FileValidInspector
       def checker
         lambda do |file|
-          file_exists = File.exists? file
-          raise('File Not existent') unless file_exists
+          raise('File Not existent') unless (File.new(file).lstat.size != 0)
         end
       end
     end
