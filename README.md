@@ -1,6 +1,6 @@
 # Sane
 
-Simple gem to run validations. Not web based. Ideal for crons and scheduler.
+Simple gem to run validations. Not web based. Ideal for crons and schedulers.
 
 ## Installation
 
@@ -27,6 +27,14 @@ For E.g. lets take a class of files represented by the String: path/to/%folder%/
 1. An expander can be now thought of a preprocessor that can be used to convert this String with placeholders to all possible combinations.
 2. Expanders should return an array of Strings back
 3. Every entry returned back by the expander would be pushed individually downstream for sanity check.
+
+E.g.
+
+```ruby
+
+lambda { |path| //Do something with path and return a array of models [...] }
+
+```
 
 ### Sub Inspectors
 
